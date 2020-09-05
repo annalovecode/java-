@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="plan.xsd">
+  <course id="c004">
+     <course-name>大学英语</course-name>
+     <course-hour>36</course-hour>
+     <exam-form>考试</exam-form>
+  </course>
+  <course id="c002">
+     <course-name>高等数学</course-name>
+     <course-hour>70</course-hour>
+     <exam-form>考试</exam-form>
+  </course>
+  <course id="c003">
+     <course-name>计算机应用基础</course-name>
+     <course-hour>108</course-hour>
+     <exam-form>上机考试</exam-form>
+  </course>
+<course id="c0001"><course-name>c语言程序基础</course-name><course-hour>36</course-hour><exam-form>上机考试</exam-form></course></plan>
