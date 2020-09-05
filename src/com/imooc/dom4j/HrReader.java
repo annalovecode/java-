@@ -1,26 +1,25 @@
 package com.imooc.dom4j;
 import java.util.List;
-
 import org.dom4j.*;
 import org.dom4j.io.SAXReader;
-//利用dom4j对文件进行解析：关键对象：xml为document的对象，利用dom4j遍历xml
+//鍒╃敤dom4j瀵规枃浠惰繘琛岃В鏋愶細鍏抽敭瀵硅薄锛歺ml涓篸ocument鐨勫璞★紝鍒╃敤dom4j閬嶅巻xml
 public class HrReader {
   public void readXml() {
 	  String file="D:/Program Files (x86)/workspace/javaWeb/src/hr.xml";
 	  SAXReader reader=new SAXReader();
-	  //SAXReader类是用于读取xml文件的核心类，用于将xml文件解析以后以树的形式保存在内存
+	  //SAXReader绫绘槸鐢ㄤ簬璇诲彇xml鏂囦欢鐨勬牳蹇冪被锛岀敤浜庡皢xml鏂囦欢瑙ｆ瀽浠ュ悗浠ユ爲鐨勫舰寮忎繚瀛樺湪鍐呭瓨
 	  try {
 		  Document document=reader.read(file);
-		  //获取xml文档的根节点，即hr标签
+		  //鑾峰彇xml鏂囨。鐨勬牴鑺傜偣锛屽嵆hr鏍囩
 		  Element root=document.getRootElement();
-		  //获取所有的employee标签
+		  //鑾峰彇鎵�鏈夌殑employee鏍囩
 		  List<Element>employees=root.elements("employee");
 		  for(Element employee:employees)
-			  //element 方法用于获取唯一的子节点
+			  //element 鏂规硶鐢ㄤ簬鑾峰彇鍞竴鐨勫瓙鑺傜偣
 		  {
 			  Element name=employee.element("name");
 		      String empName=name.getText();
-		      //getText()方法用于获取标签文本
+		      //getText()鏂规硶鐢ㄤ簬鑾峰彇鏍囩鏂囨湰
 		      System.out.println(empName);
 		      System.out.println(employee.elementText("age"));
 		      Element department=employee.element("department");
